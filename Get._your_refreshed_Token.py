@@ -4,8 +4,9 @@ import sys
 from google_auth_oauthlib.flow import InstalledAppFlow
 from oauthlib.oauth2.rfc6749.errors import InvalidGrantError
 
-DEFAULT_CLIENT_ID = 'YOUR CLIENT ID OF YOUR APP CREATED @ GOOGLE API CENTER'
-DEFAULT_CLIENT_SECRET = 'YOUR CLIENT SECRET OF YOUR APP CREATED @ GOOGLE API CENTER'
+
+CLIENT_ID = "971575854296-lio9jn1rdir21or2fm8i9l6f2sm9j18h.apps.googleusercontent.com"
+CLIENT_SECRET ="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"
 
 # The AdWords API OAuth2 scope.
 SCOPE = u'https://www.googleapis.com/auth/adwords'
@@ -13,9 +14,9 @@ _REDIRECT_URI = 'urn:ietf:wg:oauth:2.0:oob'
 
 parser = argparse.ArgumentParser(description='Generates a refresh token with '
                                              'the provided credentials.')
-parser.add_argument('--client_id', default=DEFAULT_CLIENT_ID,
+parser.add_argument('--client_id', default=CLIENT_ID,
                     help='Client Id retrieved from the Developer\'s Console.')
-parser.add_argument('--client_secret', default=DEFAULT_CLIENT_SECRET,
+parser.add_argument('--client_secret', default=CLIENT_SECRET,
                     help='Client Secret retrieved from the Developer\'s '
                          'Console.')
 parser.add_argument('--additional_scopes', default=None,
